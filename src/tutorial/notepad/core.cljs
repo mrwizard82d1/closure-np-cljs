@@ -1,6 +1,6 @@
 (ns ^:figwheel-always tutorial.notepad.core
     (:require [goog.dom :as dom]
-              [goog.ui.Zippy :as zippy]))
+              [goog.ui.Zippy]))
 
 (enable-console-print!)
 
@@ -19,7 +19,8 @@
         content-element (dom/createDom "div" nil (.-content note))
         new-note-dom (dom/createDom "div" nil
                                     header-element content-element)]
-    (dom/appendChild (.-parent note) new-note-dom)))
+    (dom/appendChild (.-parent note) new-note-dom)
+    (goog.ui.Zippy. header-element content-element)))
 
 
 ;;"Main" function for page.
