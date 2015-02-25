@@ -35,8 +35,7 @@
               ;; (fn [t c p] #js {:title t :content c :parent p})
               #(clj->js {:title %1 :content %2 :parent %3})
                   note-titles note-contents (cycle [notes-container])))
-    (doseq [note notes]
-      (make-note-dom note))))
+    (doall (map make-note-dom notes))))
 
 ;; Invoke the main function.
 (main)
