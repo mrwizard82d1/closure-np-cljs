@@ -1,8 +1,5 @@
 (ns ^:figwheel-always tutorial.notepad.core
-    (:require [dommy.core
-               :as dommy
-               :refer-macros [sel sel1]]
-              [goog.dom :as dom])
+    (:require [goog.dom :as dom])
     (:import [goog.ui Zippy]))
 
 (enable-console-print!)
